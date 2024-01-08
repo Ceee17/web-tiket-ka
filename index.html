@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        /* Main */
+        --primary: #002662;
+        --primary-400: #285ba0;
+        --primary-300: #538dcf;
+        --primary-200: #8fc0ef;
+        --primary-100: #c5e0f7;
+
+        /* Text */
+        --text-primary: #1d2433;
+        --text-secondary: #4a505c;
+        --text-disabled: #6c717a;
+
+        /* Other */
+        --background-primary: #ffffff;
+        --background-base: #f8f9fc;
+        --background-secondary: #f1f3f9;
+        --background-border: #f1f1f1;
+
+        /* Info */
+        --pressed: #003f68;
+        --hover: #00547c;
+        --default: #016d91;
+        --info-background: #ebf9fe;
+
+        /* Error */
+        --error-default: #d32e1f;
+        --error-hover: #b51616;
+        --error-pressed: #970f1a;
+        --error-background: #fce3d1;
+      }
+
+      body {
+        height: 100vh !important;
+      }
+
+      .navbar {
+        background-color: var(--background-primary) !important;
+      }
+
+      .menu li .menu1 {
+        color: var(--primary);
+      }
+
+      .menu li a {
+        color: var(--text-disabled);
+      }
+
+      .main {
+        background-color: var(--background-primary);
+        width: 100%;
+        height: 30%;
+      }
+
+      /* .login-form {
+        background-color: var(--error-default);
+        /* justify-content: center; */
+      /* } */
+
+      .form-tiket {
+        /* background-color: #b51616; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20%;
+      }
+      /* 
+      .login-form label {
+        @apply block text-white text-lg mb-2;
+      }
+
+      .login-form input {
+        @apply w-full p-2 mb-4 border rounded outline-none;
+      }
+
+      .login-form button {
+        @apply w-full p-2 bg-primary-400 text-white font-bold rounded cursor-pointer;
+      } */
+
+      .form-logo {
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <div class="navbar">
+      <!-- Brand Name -->
+      <div class="flex-1 ml-10">
+        <a class="btn btn-ghost">
+          <svg width="199" height="40" viewBox="0 0 199 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_1759)">
+              <rect width="199" height="40" fill="white" />
+              <path
+                d="M148.979 5.98438V33H143.412V5.98438H148.979ZM165.158 5.98438L154.452 19.3252L148.273 25.9678L147.271 20.6982L151.446 14.9834L158.33 5.98438H165.158ZM158.831 33L150.871 20.5127L154.99 17.0615L165.418 33H158.831ZM180.835 10.6045L173.487 33H167.568L177.606 5.98438H181.373L180.835 10.6045ZM186.939 33L179.573 10.6045L178.979 5.98438H182.783L192.877 33H186.939ZM186.605 22.9434V27.3037H172.337V22.9434H186.605Z"
+                fill="#0B0061"
+              />
+              <path
+                d="M18.9136 6.69531V33H15.481V6.69531H18.9136ZM27.3687 6.69531V9.5498H7.04395V6.69531H27.3687ZM35.0107 6.69531V33H31.5239V6.69531H35.0107ZM44.8389 6.69531V33H41.3521V6.69531H44.8389ZM60.7192 6.69531L49.7891 18.9624L43.6465 25.3398L43.0684 21.6182L47.6934 16.5234L56.5278 6.69531H60.7192ZM57.3589 33L47.6211 20.1729L49.6987 17.4087L61.5142 33H57.3589ZM81.2969 30.1636V33H67.3677V30.1636H81.2969ZM68.0723 6.69531V33H64.5854V6.69531H68.0723ZM79.4541 18.0049V20.8413H67.3677V18.0049H79.4541ZM81.1162 6.69531V9.5498H67.3677V6.69531H81.1162ZM95.6958 6.69531V33H92.2632V6.69531H95.6958ZM104.151 6.69531V9.5498H83.8262V6.69531H104.151Z"
+                fill="#1D2433"
+              />
+              <rect x="109" y="6" width="28" height="21" fill="#0C0062" />
+              <rect x="109" y="29" width="28" height="5" fill="#36ABA5" />
+              <path d="M115.249 21.5H137V11H123.275C118.545 11 114.539 14.0715 113.177 18.3116C112.873 19.2608 112.906 20.397 113.711 20.9938C114.14 21.3117 114.672 21.5 115.249 21.5Z" fill="#FFFCFF" />
+              <path d="M120.8 19.0998C120.8 18.1057 121.606 17.2998 122.6 17.2998H137V19.0998H120.8Z" fill="#36ABA5" />
+              <path
+                d="M124.311 12.9334C124.367 12.8499 124.46 12.7998 124.561 12.7998H134.339C134.579 12.7998 134.722 13.0668 134.589 13.2662L133.189 15.3662C133.133 15.4497 133.04 15.4998 132.939 15.4998H123.161C122.921 15.4998 122.778 15.2328 122.911 15.0334L124.311 12.9334Z"
+                fill="#36ABA5"
+              />
+              <path d="M113.459 17.5413H116.228C118.234 17.5413 120.107 16.5387 121.22 14.8695L122.289 13.2662C122.422 13.0668 122.279 12.7998 122.039 12.7998H117.341C115.617 13.9573 114.255 15.6051 113.459 17.5413Z" fill="#36ABA5" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_1759">
+                <rect width="199" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <!-- /Brand Name -->
+
+      <div class="flex-none gap-5 mr-20">
+        <!-- <div class="form-control">
+          <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+        </div> -->
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <a href="" class="menu1 font-bold">Pesan Tiket</a>
+          </li>
+          <li><a href="" class="font-medium">Tiketku</a></li>
+        </ul>
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+          </div>
+          <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+            <li>
+              <a class="justify-between">
+                Profile
+                <span class="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="flex flex-row">
+        <div class="flex-initial w-70">
+          <img src="img/bg.jpg" alt="" class="min-w-sm lg:w-full h-full object-cover" />
+        </div>
+        <!-- FORM TIKET -->
+        <div class="form-tiket flex-initial w-30">
+          <!-- logo -->
+          <div class="form-logo">
+            <div class="w-64 h-36 flex-col justify-start items-center gap-6 inline-flex">
+              <div class="w-56 h-10 pl-1.5 pr-5 bg-white justify-start items-center gap-1.5 inline-flex">
+                <div class="text-right text-gray-800 text-4xl font-normal font-['Roboto']">TIKET</div>
+                <div class="w-7 h-7 relative flex-col justify-start items-start flex">
+                  <div class="w-7 h-6 bg-violet-950"></div>
+                  <div class="w-7 h-1.5 bg-teal-500"></div>
+                </div>
+                <div class="text-violet-950 text-4xl font-bold font-['Roboto'] tracking-widest">KA</div>
+              </div>
+              <div class="flex-col justify-start items-center gap-3 flex">
+                <div class="text-gray-800 text-xl font-bold font-['Montserrat'] leading-normal">Pesan Tiket Kereta Online</div>
+                <div class="self-stretch text-center text-zinc-600 text-base font-normal font-['Roboto'] leading-snug tracking-tight">Cari, Pesan, dan Nikmati Tiket Kereta dengan Mudah dan Cepat</div>
+              </div>
+            </div>
+          </div>
+          <!-- end of logo -->
+          <!-- Form -->
+          <div class="form-all">
+            <div class="w-80 h-96 flex-col justify-start items-start gap-6 inline-flex">
+              <div class="self-stretch h-60 flex-col justify-start items-start gap-4 flex">
+                <div class="self-stretch h-12 flex-col justify-start items-start flex">
+                  <div class="self-stretch rounded-md border border-zinc-100 justify-start items-start inline-flex">
+                    <div class="self-stretch px-2.5 py-1 bg-slate-100 border-r border-zinc-100 flex-col justify-center items-center inline-flex">
+                      <div class="justify-start items-start gap-2.5 inline-flex">
+                        <div class="w-6 h-6 relative"></div>
+                      </div>
+                    </div>
+                    <div class="grow shrink basis-0 px-2.5 py-1 bg-white flex-col justify-start items-start inline-flex">
+                      <div class="self-stretch py-2 justify-start items-center gap-2 inline-flex">
+                        <div class="w-60 h-6 pr-36 py-px justify-start items-center flex">
+                          <div class="text-zinc-500 text-base font-normal font-['Roboto'] leading-snug tracking-tight">Stasiun Awal</div>
+                        </div>
+                        <div class="justify-start items-start gap-2.5 flex">
+                          <div class="w-6 h-6 relative"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="self-stretch h-12 flex-col justify-start items-start flex">
+                  <div class="self-stretch rounded-md border border-zinc-100 justify-start items-start inline-flex">
+                    <div class="self-stretch px-2.5 py-1 bg-slate-100 border-r border-zinc-100 flex-col justify-center items-center inline-flex">
+                      <div class="justify-start items-start gap-2.5 inline-flex">
+                        <div class="w-6 h-6 relative"></div>
+                      </div>
+                    </div>
+                    <div class="grow shrink basis-0 px-2.5 py-1 bg-white flex-col justify-start items-start inline-flex">
+                      <div class="self-stretch py-2 justify-start items-center gap-2 inline-flex">
+                        <div class="w-60 h-6 pr-36 py-px justify-start items-center flex">
+                          <div class="text-zinc-500 text-base font-normal font-['Roboto'] leading-snug tracking-tight">Stasiun Tujuan</div>
+                        </div>
+                        <div class="justify-start items-start gap-2.5 flex">
+                          <div class="w-6 h-6 relative"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="self-stretch h-12 flex-col justify-start items-start flex">
+                  <div class="self-stretch rounded-md border border-zinc-100 justify-start items-start inline-flex">
+                    <div class="self-stretch px-2.5 py-1 bg-slate-100 border-r border-zinc-100 flex-col justify-center items-center inline-flex">
+                      <div class="justify-start items-start gap-2.5 inline-flex">
+                        <div class="w-6 h-6 relative"></div>
+                      </div>
+                    </div>
+                    <div class="grow shrink basis-0 px-2.5 py-1 bg-white flex-col justify-start items-start inline-flex">
+                      <div class="self-stretch py-2 justify-start items-center gap-2 inline-flex">
+                        <div class="w-60 h-6 pr-20 py-px justify-start items-center flex">
+                          <div class="text-zinc-500 text-base font-normal font-['Roboto'] leading-snug tracking-tight">Tanggal Keberangkatan</div>
+                        </div>
+                        <div class="justify-start items-start gap-2.5 flex">
+                          <div class="w-6 h-6 relative"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="self-stretch h-12 flex-col justify-start items-start flex">
+                  <div class="self-stretch rounded-md border border-zinc-100 justify-start items-start inline-flex">
+                    <div class="self-stretch px-2.5 py-1 bg-slate-100 border-r border-zinc-100 flex-col justify-center items-center inline-flex">
+                      <div class="justify-start items-start gap-2.5 inline-flex">
+                        <div class="w-6 h-6 relative"></div>
+                      </div>
+                    </div>
+                    <div class="grow shrink basis-0 px-2.5 py-1 bg-white flex-col justify-start items-start inline-flex">
+                      <div class="self-stretch py-2 justify-start items-center gap-2 inline-flex">
+                        <div class="w-60 h-6 pr-24 py-px justify-start items-center flex">
+                          <div class="text-zinc-500 text-base font-normal font-['Roboto'] leading-snug tracking-tight">Jumlah Penumpang</div>
+                        </div>
+                        <div class="justify-start items-start gap-2.5 flex">
+                          <div class="w-6 h-6 relative"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="self-stretch h-28 flex-col justify-start items-start gap-4 flex">
+                <div class="self-stretch h-11 bg-blue-950 rounded flex-col justify-center items-center flex">
+                  <div class="px-6 py-2 flex-col justify-start items-start gap-2 flex">
+                    <div class="text-white text-base font-bold font-['Roboto'] leading-snug tracking-tight">Cari Kereta</div>
+                  </div>
+                </div>
+                <div class="self-stretch h-11 bg-blue-200 rounded flex-col justify-center items-center flex">
+                  <div class="px-6 py-2 flex-col justify-start items-start gap-2 flex">
+                    <div class="text-blue-950 text-base font-bold font-['Roboto'] leading-snug tracking-tight">Cek Kode Booking</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of Form -->
+
+          <!-- <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+
+            <button type="submit">Login</button>
+          </form> -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
