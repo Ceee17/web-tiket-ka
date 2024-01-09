@@ -57,9 +57,11 @@
       }
 
       .main {
+        /* background: lightgray url("img/bg.jpg") 50% / cover no-repeat; */
         background-color: var(--background-primary);
         width: 100%;
-        height: 30%;
+
+        /* height: 30vh; Adjusted height value, you may use 30% if you prefer */
       }
 
       /* .login-form {
@@ -93,6 +95,13 @@
         /* display: flex; */
         /* align-items: center; */
         /* justify-content: center; */
+      }
+
+      .image-container {
+        background: lightgray url("img/bg.jpg") 50% / cover no-repeat;
+        background-color: var(--background-primary);
+        width: 75%;
+        height: 92.5vh;
       }
     </style>
   </head>
@@ -166,10 +175,10 @@
     <!-- Navbar End -->
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main min-h-[92.5vh]">
       <div class="flex flex-row">
-        <div class="flex-initial w-70">
-          <img src="img/bg.jpg" alt="" class="min-w-sm lg:w-full h-full object-cover" />
+        <div class="image-container flex-initial">
+          <!-- <img src="img/bg.jpg" alt="" class="w-full h-auto object-cover" /> -->
         </div>
         <!-- FORM TIKET -->
         <div class="form-tiket flex-initial w-30">
@@ -178,10 +187,21 @@
             <div class="w-64 h-36 flex-col justify-start items-center gap-6 inline-flex">
               <div class="w-56 h-10 pl-1.5 pr-5 bg-white justify-start items-center gap-1.5 inline-flex">
                 <div class="text-right text-gray-800 text-4xl font-normal font-['Roboto']">TIKET</div>
-                <div class="w-7 h-7 relative flex-col justify-start items-start flex">
-                  <div class="w-7 h-6 bg-violet-950"></div>
-                  <div class="w-7 h-1.5 bg-teal-500"></div>
+
+                <div>
+                  <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.949951" y="0.300049" width="29.4" height="22.05" fill="#0C0062" />
+                    <rect x="0.949951" y="24.45" width="29.4" height="5.25" fill="#36ABA5" />
+                    <path d="M7.51094 16.575H30.3499V5.55005H15.9387C10.9724 5.55005 6.76627 8.77509 5.33621 13.2272C5.01605 14.2239 5.05171 15.4169 5.89674 16.0436C6.3468 16.3774 6.90558 16.575 7.51094 16.575Z" fill="#FFFCFF" />
+                    <path d="M13.3398 14.0548C13.3398 13.011 14.186 12.1648 15.2298 12.1648H30.3499V14.0548H13.3398V14.0548Z" fill="#36ABA5" />
+                    <path
+                      d="M17.0262 7.57997C17.0846 7.49233 17.183 7.4397 17.2883 7.4397H27.5562C27.8077 7.4397 27.9578 7.72009 27.8183 7.92943L26.3483 10.1344C26.2898 10.2221 26.1915 10.2747 26.0862 10.2747H15.8183C15.5667 10.2747 15.4167 9.9943 15.5562 9.78497L17.0262 7.57997Z"
+                      fill="#36ABA5"
+                    />
+                    <path d="M5.63184 12.4182H8.53931C10.6457 12.4182 12.6128 11.3655 13.7812 9.61284L14.9035 7.92943C15.0431 7.72009 14.893 7.4397 14.6414 7.4397H9.70828C7.89756 8.65504 6.46739 10.3853 5.63184 12.4182Z" fill="#36ABA5" />
+                  </svg>
                 </div>
+
                 <div class="text-violet-950 text-4xl font-bold font-['Roboto'] tracking-widest">KA</div>
               </div>
               <div class="flex-col justify-start items-center gap-3 flex">
@@ -191,9 +211,10 @@
             </div>
           </div>
           <!-- end of logo -->
+
           <!-- Form -->
           <div class="form-all">
-            <div class="w-80 h-96 flex-col justify-start items-start gap-6 inline-flex">
+            <!-- <div class="w-80 h-96 flex-col justify-start items-start gap-6 inline-flex">
               <div class="self-stretch h-60 flex-col justify-start items-start gap-4 flex">
                 <div class="self-stretch h-12 flex-col justify-start items-start flex">
                   <div class="self-stretch rounded-md border border-zinc-100 justify-start items-start inline-flex">
@@ -284,19 +305,9 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- end of Form -->
-
-          <!-- <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" />
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" />
-
-            <button type="submit">Login</button>
-          </form> -->
         </div>
       </div>
     </main>
