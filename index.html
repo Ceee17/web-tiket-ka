@@ -222,6 +222,30 @@
         align-items: center;
         justify-content: center;
       }
+
+      .cari-btn {
+        background-color: var(--primary);
+        color: var(--background-primary);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .cari-btn:hover {
+        background-color: var(--hover);
+        transform: scale(1.05);
+      }
+
+      .cek-btn {
+        background-color: var(--primary-100);
+        color: var(--primary);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .cek-btn:hover {
+        background-color: var(--hover);
+        color: var(--background-primary);
+
+        transform: scale(1.05);
+      }
     </style>
   </head>
 
@@ -262,7 +286,7 @@
       </div>
       <!-- /Brand Name -->
 
-      <div class="flex-none gap-5 mr-">
+      <div class="flex-none gap-5 mr-[120px]">
         <!-- <div class="form-control">
           <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
         </div> -->
@@ -518,7 +542,14 @@
                 </div>
                 <!-- end of text field 4 -->
               </div>
+
+              <!-- cari kereta btn -->
+              <button class="cari-btn btn btn-ghost w-full mt-[24px]">Cari Kereta</button>
+              <!-- end of cari kereta btn -->
             </form>
+            <!-- cek kode booking btn -->
+            <button class="cek-btn btn btn-ghost w-full mt-[16px]">Cek Kode Booking</button>
+            <!-- end of cek kode booking btn -->
           </div>
           <!-- end of Form -->
         </div>
