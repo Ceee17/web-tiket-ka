@@ -246,6 +246,18 @@
 
         transform: scale(1.05);
       }
+
+      .copyright {
+        color: var(--text-secondary);
+
+        /* Body Small/Small-Medium */
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 0.2px;
+      }
     </style>
   </head>
 
@@ -320,7 +332,7 @@
     <!-- Main Content -->
     <main class="main min-h-[92.5vh]">
       <div class="flex flex-row">
-        <!-- image section -->
+        <!-- IMAGE SECTION -->
         <div class="image-container flex-initial">
           <!-- footer -->
           <div class="footer">
@@ -349,10 +361,10 @@
 
           <!-- <img src="img/bg.jpg" alt="" class="w-full h-auto object-cover" /> -->
         </div>
-        <!-- end of image section -->
+        <!-- END OF IMAGE SECTION -->
 
-        <!-- FORM TIKET -->
-        <div class="form-tiket flex-initial h-auto w-[25%] gap-[36px]">
+        <!-- FORM SECTION -->
+        <div class="form-tiket flex-initial h-auto w-[25%] gap-[36px] mt-[50px]">
           <!-- logo -->
           <div class="form-logo">
             <div class="w-64 h-36 flex-col justify-start items-center gap-6 inline-flex">
@@ -547,12 +559,16 @@
               <button class="cari-btn btn btn-ghost w-full mt-[24px]">Cari Kereta</button>
               <!-- end of cari kereta btn -->
             </form>
+            <!-- end of Form -->
             <!-- cek kode booking btn -->
             <button class="cek-btn btn btn-ghost w-full mt-[16px]">Cek Kode Booking</button>
             <!-- end of cek kode booking btn -->
           </div>
-          <!-- end of Form -->
+          <!-- copyright -->
+          <p class="copyright mt-auto mb-[64px]">© 2023 PT. Tiket Kereta Api. All Rights Reserved</p>
+          <!-- end of copyright -->
         </div>
+        <!-- END OF FORM SECTION -->
       </div>
     </main>
   </body>
